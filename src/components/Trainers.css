@@ -1,0 +1,89 @@
+.trainers {
+  background: #1a1a1a;
+}
+
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.trainer-card {
+  background: #252525;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #3a3a3a;
+  transition: all 0.3s ease;
+}
+
+.trainer-card:hover {
+  transform: translateY(-10px);
+  border-color: #ff6b00;
+  box-shadow: 0 15px 40px rgba(255, 107, 0, 0.3);
+}
+
+.trainer-image {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+
+.trainer-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.trainer-card:hover .trainer-photo {
+  transform: scale(1.1);
+}
+
+.trainer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 107, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.trainer-card:hover .trainer-overlay {
+  opacity: 1;
+}
+
+.trainer-info {
+  padding: 25px;
+  text-align: center;
+}
+
+.trainer-info h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.trainer-specialization {
+  color: #ff6b00;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.trainer-experience {
+  font-size: 13px;
+  color: #d0d0d0;
+}
+
+@media (max-width: 768px) {
+  .trainers-grid {
+    grid-template-columns: 1fr;
+  }
+}
