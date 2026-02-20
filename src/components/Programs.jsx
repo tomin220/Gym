@@ -1,6 +1,9 @@
+import { useNavigate } from 'react-router-dom'
 import './Programs.css'
 
 function Programs() {
+  const navigate = useNavigate()
+
   const programs = [
     {
       title: 'Strength Training',
@@ -51,7 +54,9 @@ function Programs() {
                   </li>
                 ))}
               </ul>
-              <button className="btn btn-secondary">Learn More</button>
+              <button className="btn btn-secondary" onClick={() => navigate('/programs')}>
+                Learn More
+              </button>
             </div>
           </div>
         ))}

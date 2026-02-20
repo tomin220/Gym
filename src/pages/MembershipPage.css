@@ -1,0 +1,229 @@
+.membership-page {
+  padding-top: 80px;
+  min-height: 100vh;
+  background: #1a1a1a;
+}
+
+.billing-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.membership-plans-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.membership-detail-card {
+  background: #252525;
+  border-radius: 12px;
+  padding: 40px 30px;
+  border: 2px solid #3a3a3a;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.membership-detail-card:hover {
+  transform: translateY(-10px);
+  border-color: #ff6b00;
+  box-shadow: 0 20px 50px rgba(255, 107, 0, 0.3);
+}
+
+.membership-detail-card.popular {
+  border-color: #ff6b00;
+  transform: scale(1.02);
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.plan-header h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 3px;
+}
+
+.plan-desc {
+  font-size: 14px;
+  color: #d0d0d0;
+  margin-bottom: 25px;
+}
+
+.price-display {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.best-for {
+  font-size: 14px;
+  color: #ff6b00;
+  font-style: italic;
+}
+
+.plan-features {
+  flex-grow: 1;
+  margin-bottom: 30px;
+}
+
+.plan-features h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #ff6b00;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.included-list,
+.not-included-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.included-list li {
+  padding: 12px 0;
+  color: #d0d0d0;
+  font-size: 14px;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.not-included-list li {
+  padding: 12px 0;
+  color: #888;
+  font-size: 14px;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.not-included-title {
+  margin-top: 20px;
+  color: #888 !important;
+}
+
+.cross-icon {
+  color: #888;
+  margin-right: 10px;
+}
+
+.membership-detail-card .btn {
+  width: 100%;
+}
+
+.comparison-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.comparison-section h2 {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 3px;
+}
+
+.comparison-table {
+  overflow-x: auto;
+}
+
+.comparison-table table {
+  width: 100%;
+  background: #252525;
+  border-radius: 12px;
+  overflow: hidden;
+  border-collapse: collapse;
+}
+
+.comparison-table th {
+  background: #ff6b00;
+  color: #fff;
+  padding: 20px;
+  text-align: left;
+  font-size: 18px;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+}
+
+.comparison-table td {
+  padding: 20px;
+  border-bottom: 1px solid #3a3a3a;
+  color: #d0d0d0;
+  font-size: 15px;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.faq-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.faq-section h2 {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 3px;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.faq-item {
+  background: #252525;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #3a3a3a;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: #ff6b00;
+  transform: translateY(-5px);
+}
+
+.faq-item h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ff6b00;
+}
+
+.faq-item p {
+  font-size: 15px;
+  color: #d0d0d0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .membership-plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .membership-detail-card.popular {
+    transform: scale(1);
+  }
+
+  .comparison-table {
+    font-size: 14px;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 12px;
+  }
+}

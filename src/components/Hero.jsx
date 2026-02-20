@@ -1,6 +1,9 @@
+import { useNavigate } from 'react-router-dom'
 import './Hero.css'
 
 function Hero() {
+  const navigate = useNavigate()
+
   return (
     <section id="home" className="hero">
       <div className="hero-overlay"></div>
@@ -19,8 +22,12 @@ function Hero() {
           Transform your body, elevate your mind, and conquer your limits at IronCore Fitness
         </p>
         <div className="hero-buttons">
-          <button className="btn btn-primary">Start Your Journey</button>
-          <button className="btn btn-secondary">Explore Programs</button>
+          <button className="btn btn-primary" onClick={() => navigate('/membership')}>
+            Start Your Journey
+          </button>
+          <button className="btn btn-secondary" onClick={() => navigate('/programs')}>
+            Explore Programs
+          </button>
         </div>
       </div>
     </section>
